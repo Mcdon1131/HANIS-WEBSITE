@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HANI'S | Cakes, Events & Imports</title>
+    <meta
+      name="description"
+      content="Discover HANI'S cakes, event planning and carefully selected imported products, all in one place."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"><p id="boot" style="font-family:sans-serif;padding:24px">Loading HANI'S…</p></div>
+    <script>
+      // If the app fails to start, show why instead of a blank page.
+      function showBootError(e) {
+        var boot = document.getElementById("boot");
+        if (!boot) return;
+        var msg = e && (e.stack || e.message || e.reason || e);
+        boot.innerHTML = "<b>The app failed to start:</b><pre style='white-space:pre-wrap'></pre>";
+        boot.querySelector("pre").textContent = String(msg);
+      }
+      window.addEventListener("error", function (ev) { showBootError(ev.error || ev.message); });
+      window.addEventListener("unhandledrejection", function (ev) { showBootError(ev.reason); });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

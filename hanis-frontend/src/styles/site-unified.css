@@ -1,0 +1,661 @@
+.unified-page {
+  background: #f7f8fa;
+  color: #20252b;
+  font-family: "Manrope", sans-serif;
+  overflow-x: clip;
+}
+.unified-page h1,
+.unified-page h2,
+.unified-page h3,
+.unified-page h4 {
+  color: #20252b;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -0.03em;
+}
+.unified-page .site-header {
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 2px 12px rgba(20, 35, 50, 0.07);
+}
+.unified-page .nav-wrap {
+  min-height: 76px;
+  gap: 16px;
+}
+.unified-page .brand {
+  flex: 0 0 auto;
+  gap: 8px;
+  letter-spacing: 0.12em;
+}
+.unified-page .brand-mark {
+  width: 36px;
+  height: 36px;
+}
+.unified-page .brand-text {
+  font-size: 1.02rem;
+  letter-spacing: 0.12em;
+}
+.unified-page .market-search {
+  position: relative;
+  display: flex;
+  flex: 1 1 270px;
+  max-width: 420px;
+  min-width: 160px;
+  height: 44px;
+  margin-left: auto;
+}
+.unified-page .market-search input {
+  width: 100%;
+  height: 100%;
+  padding: 0 54px 0 16px;
+  border: 1px solid #e0e4e8;
+  border-radius: 9px;
+  background: #f7f8fa;
+  color: #20252b;
+}
+.unified-page .market-search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  width: 46px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 0 9px 9px 0;
+  background: #356458;
+  color: #fff;
+  cursor: pointer;
+}
+.unified-page .market-search svg,
+.unified-page .contact-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+.unified-page .nav-actions {
+  gap: 10px;
+}
+.unified-page .cart-link {
+  background: #fff;
+  border-color: #e5e8eb;
+  white-space: nowrap;
+}
+.unified-page .contact-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f5ee;
+  color: #198754;
+}
+.unified-page .main-nav {
+  gap: 14px;
+  color: #50575d;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+.unified-page .main-nav a.active::after,
+.unified-page .main-nav a:hover::after {
+  background: #356458;
+}
+.unified-page .mobile-nav-toggle {
+  display: none;
+}
+.unified-page .market-category-nav {
+  position: sticky;
+  top: 76px;
+  z-index: 20;
+  border-bottom: 1px solid #e7e9ec;
+  background: #fff;
+}
+.unified-page .market-category-list {
+  display: flex;
+  min-height: 48px;
+  align-items: stretch;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.unified-page .market-category-list a,
+.unified-page .market-category-list button {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0 17px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #5c6268;
+  font-size: 0.86rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.unified-page .market-category-list a:hover,
+.unified-page .market-category-list a.active,
+.unified-page .market-category-list button:hover,
+.unified-page .market-category-list button.active {
+  border-bottom-color: #356458;
+  color: #23483f;
+}
+.unified-page main {
+  min-height: 60vh;
+}
+.unified-page main > .page-hero {
+  margin: 22px auto 0;
+  padding: 24px 0 14px;
+  background: transparent;
+  color: #20252b;
+}
+.unified-page main > .page-hero h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.unified-page main > .section {
+  padding: 24px 0 48px;
+}
+.unified-page main > .section.alt-bg {
+  background: transparent;
+}
+.unified-page .narrow-container {
+  width: min(1160px, 100%);
+}
+.unified-page .product-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.unified-page .product-card {
+  overflow: hidden;
+  border: 1px solid #e7e9ec;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 34, 44, 0.035);
+}
+.unified-page .product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(23, 34, 44, 0.1);
+}
+.unified-page .product-card img {
+  height: 190px;
+  padding: 10px;
+  background: #f5f6f7;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.unified-page .product-body {
+  padding: 12px;
+}
+.unified-page .product-body h3 {
+  min-height: 2.7em;
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+.unified-page .product-body p {
+  min-height: 2.9em;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+.unified-page .product-meta {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px 9px;
+  font-size: 0.67rem;
+}
+.unified-page .rating {
+  display: none;
+}
+.unified-page .product-footer {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 10px;
+}
+.unified-page .product-footer strong {
+  font-size: 1rem;
+}
+.unified-page .button,
+.unified-page .mini-button {
+  min-height: 40px;
+  border-radius: 7px;
+  box-shadow: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: 750;
+}
+.unified-page .primary-button {
+  border: 0;
+  background: #356458;
+  color: #fff;
+}
+.unified-page .primary-button:hover {
+  background: #23483f;
+}
+.unified-page .secondary-button {
+  border: 1px solid #dfe4e7;
+  background: #fff;
+  color: #20252b;
+}
+.unified-page .site-footer {
+  margin-top: 36px;
+  background: #fff;
+  color: #20252b;
+  border-top: 1px solid #e7e9ec;
+}
+.unified-page .site-footer p {
+  max-width: 350px;
+  color: #687078;
+}
+.unified-page .site-footer h3 {
+  font-size: 1rem;
+}
+.unified-page .site-footer ul {
+  list-style: none;
+  padding: 0;
+}
+.unified-page .site-footer a:not(.brand) {
+  color: #606970;
+}
+.unified-page .site-footer a:hover {
+  color: #356458;
+}
+.unified-page .copyright {
+  border-top: 1px solid #e7e9ec;
+  color: #727a80;
+}
+.unified-page .whatsapp-float {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(23, 34, 44, 0.14);
+}
+.unified-page .page-hero.slim-hero {
+  min-height: 0;
+}
+.unified-page .content-grid,
+.unified-page .quote-card,
+.unified-page .contact-form,
+.unified-page .detail-box,
+.unified-page .rule-card,
+.unified-page .form-card,
+.unified-page .cart-summary,
+.unified-page .empty-state {
+  border: 1px solid #e7e9ec;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 34, 44, 0.035);
+}
+.unified-page .contact-details {
+  align-content: start;
+}
+.unified-page .detail-info,
+.unified-page .detail-box {
+  background: #fff;
+  color: #20252b;
+}
+.unified-page .detail-layout {
+  gap: 24px;
+}
+.unified-page .cart-item {
+  border: 1px solid #e7e9ec;
+  border-radius: 10px;
+  background: #fff;
+}
+.unified-page .faq-item {
+  padding: 18px;
+  border: 1px solid #e7e9ec;
+  border-radius: 9px;
+  background: #fff;
+}
+.unified-page .faq-page-list {
+  gap: 12px;
+}
+.unified-page .market-event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.unified-page .market-event-card {
+  overflow: hidden;
+  border: 1px solid #e7e9ec;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 34, 44, 0.035);
+}
+.unified-page .market-event-card > img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+.unified-page .market-event-card > div {
+  padding: 18px;
+}
+.unified-page .market-event-card h2 {
+  font-size: 1.2rem;
+}
+.unified-page .market-event-card p:not(.eyebrow) {
+  min-height: 4.7em;
+  color: #687078;
+  font-size: 0.84rem;
+}
+.unified-page .loader {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(5px);
+}
+.unified-page .loader-dot {
+  background: #356458;
+}
+.unified-page .loader-dots {
+  gap: 8px;
+}
+.unified-page .loader-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: unified-loader-pulse 0.9s ease-in-out infinite;
+}
+.unified-page .loader-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.unified-page .loader-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes unified-loader-pulse {
+  0%, 80%, 100% { transform: scale(0.7); opacity: 0.45; }
+  40% { transform: scale(1); opacity: 1; }
+}
+.unified-page .cake-modal.active {
+  z-index: 110;
+}
+.unified-page.cake-category-page main > :not(#cakes) {
+  display: none !important;
+}
+.unified-page.cake-category-page main > #cakes {
+  display: block !important;
+  padding-top: 24px;
+  background: transparent;
+}
+.unified-page.cake-category-page #cakes .section-top {
+  margin-bottom: 20px;
+  align-items: center;
+}
+.unified-page.cake-category-page #cakes .section-top h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+.unified-page.cake-category-page #cakes .section-top > p {
+  color: #687078;
+}
+.unified-page.cake-category-page .cake-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.unified-page.cake-category-page .cake-card {
+  overflow: hidden;
+  border: 1px solid #e7e9ec;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 34, 44, 0.035);
+  cursor: pointer;
+}
+.unified-page.cake-category-page .cake-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(23, 34, 44, 0.1);
+}
+.unified-page.cake-category-page .cake-image {
+  height: 190px;
+  background: #f5f6f7;
+}
+.unified-page.cake-category-page .cake-image img {
+  height: 100%;
+  object-fit: contain;
+}
+.unified-page.cake-category-page .view-cake {
+  display: none;
+}
+.unified-page.cake-category-page .cake-info {
+  padding: 12px;
+}
+.unified-page.cake-category-page .cake-info-top {
+  margin-bottom: 7px;
+}
+.unified-page.cake-category-page .cake-info-top > span {
+  display: none;
+}
+.unified-page.cake-category-page .cake-info-top strong,
+.unified-page.cake-category-page .cake-info h3 {
+  color: #20252b;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+.unified-page.cake-category-page .cake-info h3 {
+  min-height: 2.7em;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.unified-page.cake-category-page .add-to-cart-btn {
+  min-height: 38px;
+  border: 1px solid #356458;
+  border-radius: 6px;
+  background: #fff;
+  color: #356458;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.unified-page.cake-category-page .add-to-cart-btn:hover {
+  background: #356458;
+  color: #fff;
+}
+.unified-page.cake-category-page .cakes.section {
+  padding-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .unified-page .main-nav {
+    gap: 9px;
+    font-size: 0.75rem;
+  }
+  .unified-page .product-grid,
+  .unified-page.cake-category-page .cake-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .unified-page .nav-wrap {
+    min-height: 72px;
+  }
+  .unified-page .mobile-nav-toggle {
+    display: inline-flex;
+    order: 4;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+    border: 1px solid #e5e8eb;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+  }
+  .unified-page .mobile-nav-toggle span {
+    width: 18px;
+    height: 1px;
+    margin: 0 auto;
+    background: #20252b;
+  }
+  .unified-page .main-nav {
+    top: calc(100% + 5px);
+    right: 0;
+    left: auto;
+    z-index: 31;
+    width: min(300px, calc(100vw - 24px));
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px;
+    border: 1px solid #e7e9ec;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+  .unified-page .main-nav a {
+    padding: 10px;
+  }
+  .unified-page .site-header.nav-open .main-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .unified-page .market-category-nav {
+    top: 72px;
+  }
+  .unified-page .market-category-list {
+    width: 100%;
+    padding: 0 12px;
+  }
+  .unified-page .product-grid,
+  .unified-page.cake-category-page .cake-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .unified-page .market-event-grid {
+    grid-template-columns: 1fr;
+  }
+  .unified-page .market-event-card {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.8fr) 1fr;
+  }
+  .unified-page .market-event-card > img {
+    height: 100%;
+    min-height: 230px;
+  }
+}
+@media (max-width: 640px) {
+  .unified-page .nav-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-rows: 38px 40px;
+    height: 102px;
+    min-height: 0;
+    width: calc(100% - 20px);
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .unified-page .brand {
+    grid-column: 1;
+    grid-row: 1;
+    gap: 7px;
+  }
+  .unified-page .brand-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  .unified-page .brand-text {
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+  }
+  .unified-page .market-search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: none;
+    height: 40px;
+    margin: 0;
+  }
+  .unified-page .market-search input {
+    padding-left: 10px;
+    padding-right: 40px;
+    font-size: 0.78rem;
+  }
+  .unified-page .market-search button {
+    width: 36px;
+    height: 40px;
+  }
+  .unified-page .nav-actions {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 5px;
+  }
+  .unified-page .contact-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .unified-page .cart-link {
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    padding: 4px;
+  }
+  .unified-page .cart-link > span:first-child {
+    display: none;
+  }
+  .unified-page .mobile-nav-toggle {
+    grid-column: 3;
+    grid-row: 1;
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+  }
+  .unified-page .market-category-nav {
+    top: 102px;
+  }
+  .unified-page .market-category-list {
+    min-height: 44px;
+    gap: 1px;
+  }
+  .unified-page .market-category-list a,
+  .unified-page .market-category-list button {
+    padding: 0 13px;
+    font-size: 0.79rem;
+  }
+  .unified-page main > .section {
+    padding: 18px 0 36px;
+  }
+  .unified-page .product-grid,
+  .unified-page.cake-category-page .cake-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .unified-page .market-event-card {
+    display: block;
+  }
+  .unified-page .market-event-card > img {
+    height: 190px;
+    min-height: 0;
+  }
+  .unified-page .product-card img,
+  .unified-page.cake-category-page .cake-image {
+    height: clamp(118px, 39vw, 175px);
+  }
+  .unified-page .product-body {
+    padding: 9px;
+  }
+  .unified-page .product-body h3,
+  .unified-page.cake-category-page .cake-info h3 {
+    font-size: 0.78rem;
+  }
+  .unified-page .product-body p {
+    font-size: 0.66rem;
+  }
+  .unified-page .product-footer strong,
+  .unified-page.cake-category-page .cake-info-top strong {
+    font-size: 0.86rem;
+  }
+  .unified-page .product-footer .button,
+  .unified-page.cake-category-page .add-to-cart-btn {
+    width: 100%;
+    min-height: 38px;
+    padding: 7px;
+    font-size: 0.72rem;
+  }
+  .unified-page.cake-category-page #cakes .section-top {
+    display: block;
+  }
+}

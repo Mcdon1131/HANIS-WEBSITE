@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Chocolate and vanilla Cake",
+    "category": "cakes",
+    "price": 4000,
+    "image": "order hanis/cake.jpeg",
+    "description": "A beautifully designed celebration cake made for birthdays and memorable occasions."
+  },
+  {
+    "name": "Birthday Cake",
+    "category": "cakes",
+    "price": 40000,
+    "image": "order hanis/happy birthdaycake.jpeg",
+    "description": "A sophisticated floral cake design for birthdays, anniversaries and special celebrations."
+  },
+  {
+    "name": "Meat pie",
+    "category": "cakes",
+    "price": 10000,
+    "image": "order hanis/meatpie.jpeg",
+    "description": "A rich and indulgent food tray designed for events and premium celebrations."
+  },
+  {
+    "name": "iced cup cake",
+    "category": "cakes",
+    "price": 8000,
+    "image": "order hanis/8k.jpeg",
+    "description": "A clean, modern cupcake design perfect for celebrations and special treats."
+  },
+  {
+    "name": "Small chops",
+    "category": "cakes",
+    "price": 6000,
+    "image": "order hanis/smallch.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Bento chocolate cake",
+    "category": "cakes",
+    "price": 6500,
+    "image": "order hanis/bento.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Fruit hamper",
+    "category": "cakes",
+    "price": 35000,
+    "image": "order hanis/basket.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Small chops",
+    "category": "cakes",
+    "price": 3500,
+    "image": "order hanis/nnylon.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Cupcake",
+    "category": "cakes",
+    "price": 1000,
+    "image": "order hanis/1.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Chinchin",
+    "category": "cakes",
+    "price": 1000,
+    "image": "order hanis/chichi.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "ChinChin small container",
+    "category": "cakes",
+    "price": 2000,
+    "image": "order hanis/chi.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Chinchin big container",
+    "category": "cakes",
+    "price": 8500,
+    "image": "order hanis/group.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Chinchin",
+    "category": "cakes",
+    "price": 800,
+    "image": "order hanis/cup.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Smallchops",
+    "category": "cakes",
+    "price": 2500,
+    "image": "order hanis/kpomo.jpeg",
+    "description": "Sweet Moments, Beautifully Baked."
+  },
+  {
+    "name": "Uniced vanila 6inch cake",
+    "category": "cakes",
+    "price": 7500,
+    "image": "order hanis/vanila.jpeg",
+    "description": "Sweet Moments, Beautifully Baked."
+  },
+  {
+    "name": "Treat package",
+    "category": "cakes",
+    "price": 15000,
+    "image": "order hanis/15.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Uniced vanilla cake 7 inch",
+    "category": "cakes",
+    "price": 10000,
+    "image": "order hanis/pan.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Uniced vanilla cake 4inch",
+    "category": "cakes",
+    "price": 6500,
+    "image": "order hanis/5in.jpeg",
+    "description": "Sweet Moments, Beautifully Baked"
+  },
+  {
+    "name": "Uniced vanilla cake 4inch",
+    "category": "cakes",
+    "price": 5000,
+    "image": "order hanis/van.jpeg",
+    "description": "Sweet Moments, Beautifully Baked."
+  },
+  {
+    "name": "Fruit parfait",
+    "category": "cakes",
+    "price": 4500,
+    "image": "order hanis/parf1.jpeg",
+    "description": "Sweet Moments, Beautifully Baked."
+  }
+]
