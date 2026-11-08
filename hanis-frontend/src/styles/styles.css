@@ -1573,6 +1573,7 @@ body.dark-mode .site-header {
   background: linear-gradient(135deg, var(--navy), var(--black));
   color: #fff;
   padding-top: 42px;
+  padding-left: 10px;
 }
 .footer-grid {
   display: grid;
