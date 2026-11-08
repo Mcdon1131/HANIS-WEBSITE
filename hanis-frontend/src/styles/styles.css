@@ -308,6 +308,7 @@ select {
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 14px;
+  padding: 0 20px;
 }
 .market-section-heading h1,
 .market-section-heading h2 {
