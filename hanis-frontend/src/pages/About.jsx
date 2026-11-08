@@ -13,7 +13,7 @@ export default function About() {
 
       <section className="section">
         <div className="container content-grid">
-          <div style={{padding: "0px 10px"}}>
+          <div style={{padding: "15px"}}>
             <p>
               HANI'S brings cakes, event planning and carefully selected imported products
               together under one brand. We focus on thoughtful details, clear communication and
