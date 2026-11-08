@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header className={`site-header ${navOpen ? "nav-open" : ""}`}>
-      <div style={{paddingLeft: "13x", paddingRight: "13px"}} className="container nav-wrap">
+      <div style={{paddingLeft: "13px", paddingRight: "13px"}} className="container nav-wrap">
         <Link className="brand" to="/" aria-label="HANI'S home">
           <span className="brand-mark">H</span>
           <span className="brand-text">HANI'S</span>
