@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { whatsappLink } from "../utils/whatsapp";
 
@@ -51,7 +57,7 @@ export default function Header() {
 
   return (
     <header className={`site-header ${navOpen ? "nav-open" : ""}`}>
-      <div className="container nav-wrap">
+      <div style={{paddingLeft: "13x", paddingRight: "13px"}} className="container nav-wrap">
         <Link className="brand" to="/" aria-label="HANI'S home">
           <span className="brand-mark">H</span>
           <span className="brand-text">HANI'S</span>
@@ -78,21 +84,23 @@ export default function Header() {
         </form>
 
         <div className="nav-actions">
-          <a
-            className="contact-icon"
-            href={whatsappLink()}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Contact HANI'S on WhatsApp"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20l1-4.7a8.5 8.5 0 1 1 16.5-3.6Z" />
-              <path d="M8.5 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .5l-.5.7c-.2.2-.2.4 0 .6.4.7 1.1 1.3 1.8 1.7.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.4-1.1.6-1.8.4-1-.2-2.2-.8-3.4-1.8-1-.9-1.8-2-2-2.9-.3-.8-.1-1.6.3-2.2Z" />
+          <Link style={{position: "relative"}} to="/cart" className="cart-link" aria-label="Shopping cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-          </a>
-          <Link to="/cart" className="cart-link" aria-label="Shopping cart">
-            <span>Cart</span>
-            <span className="cart-count">{count}</span>
+            <span style={{position: "absolute", right: "0", top: "2px"}} className="cart-count header-responsive">{count}</span>
           </Link>
         </div>
 
@@ -109,12 +117,16 @@ export default function Header() {
         </button>
 
         <nav className="main-nav" aria-label="Main navigation">
-          <NavLink to="/" end className={navClass}>Home</NavLink>
-          <Link to="/?category=cakes">Cakes</Link>
-          <NavLink to="/events" className={navClass}>Events</NavLink>
-          <NavLink to="/products" end className={navClass}>Importation</NavLink>
-          <NavLink to="/about" className={navClass}>About</NavLink>
-          <NavLink to="/contact" className={navClass}>Contact</NavLink>
+          <NavLink to="/" end className={navClass}>
+            Home
+          </NavLink>
+         
+          <NavLink to="/about" className={navClass}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={navClass}>
+            Contact
+          </NavLink>
         </nav>
       </div>
     </header>
