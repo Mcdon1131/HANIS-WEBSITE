@@ -1,5 +1,11 @@
 /* Admin dashboard. Everything is scoped to .adm / .adm-* so it can't clash with the storefront CSS. */
 
+:where(.adm, .adm *, .adm *::before, .adm *::after) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .adm {
   --a-brand: #356458;
   --a-deep: #23483f;
@@ -106,7 +112,9 @@
   text-decoration: none;
   cursor: pointer;
   text-align: left;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 .adm-nav a:hover,
 .adm-side-foot a:hover,
@@ -129,11 +137,17 @@
 /* ---------- main ---------- */
 .adm-main {
   min-width: 0;
-  padding: 32px clamp(18px, 4vw, 44px) 60px;
+  padding: 25px clamp(15px, 3vw, 28px) 32px;
+}
+.adm-main > :not(dialog) {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .adm-head {
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 24px;
@@ -150,6 +164,7 @@
 }
 .adm-head-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -168,7 +183,10 @@
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    opacity 0.15s;
 }
 .adm-btn.small {
   min-height: 34px;
@@ -213,7 +231,9 @@
   background: transparent;
   color: var(--a-muted);
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 .adm-icon-btn:hover:not(:disabled) {
   background: var(--a-soft);
@@ -249,7 +269,7 @@
 }
 .adm-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 14px;
   margin-bottom: 18px;
 }
@@ -412,7 +432,9 @@
   border: 1px solid var(--a-line);
   border-radius: 12px;
   background: var(--a-card);
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
 .adm-row:hover {
   border-color: #d3dcd8;
@@ -643,7 +665,9 @@
   border-radius: 14px;
   background: #f8faf9;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
 }
 .adm-drop:hover,
 .adm-drop.dragging {
@@ -759,6 +783,17 @@
 }
 
 /* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .adm {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+  .adm-row {
+    grid-template-columns: 56px minmax(0, 1fr) 130px 110px 84px;
+  }
+  .adm-row-date {
+    display: none;
+  }
+}
 @media (max-width: 960px) {
   .adm-row {
     grid-template-columns: 56px minmax(0, 1fr) 110px 84px;
@@ -773,9 +808,10 @@
 }
 @media (max-width: 760px) {
   .adm {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .adm-side {
+    min-width: 0;
     position: sticky;
     z-index: 40;
     height: auto;
@@ -792,6 +828,10 @@
     display: flex;
     flex: 1 0 100%;
     overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .adm-nav::-webkit-scrollbar {
+    display: none;
   }
   .adm-nav a {
     flex: none;
@@ -807,7 +847,7 @@
     display: none;
   }
   .adm-main {
-    padding-top: 22px;
+    padding-top: 18px;
   }
   .adm-stats {
     grid-template-columns: 1fr;
@@ -856,9 +896,105 @@
     aspect-ratio: 16 / 10;
   }
   .adm-fields {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .adm-cat-add {
     flex-direction: column;
+  }
+  .adm-search input,
+  .adm-toolbar select,
+  .adm-cat-add input,
+  .adm-field input,
+  .adm-field select,
+  .adm-field textarea {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .adm-card,
+  .adm-stat {
+    padding: 16px;
+  }
+  .adm-note {
+    flex-wrap: wrap;
+  }
+  .adm-note p {
+    flex: 1 1 180px;
+  }
+  .adm-recent li {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+  .adm-recent img {
+    width: 40px;
+    height: 40px;
+  }
+  .adm-row {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    column-gap: 10px;
+    padding: 8px;
+  }
+  .adm-row img {
+    width: 48px;
+    height: 48px;
+  }
+  .adm-fields {
+    grid-template-columns: 1fr;
+  }
+  .adm-dialog {
+    width: calc(100vw - 16px);
+    border-radius: 16px;
+  }
+  .adm-dialog-head {
+    padding: 14px 10px 4px 16px;
+  }
+  .adm-dialog-body {
+    gap: 14px;
+    padding: 10px 16px 4px;
+  }
+  .adm-dialog-actions {
+    flex-direction: column-reverse;
+    padding: 12px 16px 16px;
+  }
+  .adm-dialog-actions .adm-btn {
+    width: 100%;
+  }
+  .adm-form-error {
+    margin: 8px 16px 0;
+  }
+  .adm-confirm-body {
+    padding: 20px 16px 4px;
+  }
+  .adm-toasts {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+  }
+}
+@media (max-width: 360px) {
+  .adm-side {
+    padding: 8px;
+  }
+  .adm-brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+  .adm-nav a {
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* bigger tap targets on touch screens */
+@media (pointer: coarse) {
+  .adm-icon-btn,
+  .adm-dialog .adm-icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .adm-btn {
+    min-height: 44px;
   }
 }
